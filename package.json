@@ -1,0 +1,50 @@
+{
+  "name": "bluey-game",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^1.2.4",
+    "@ai-sdk/google": "^1.2.10",
+    "@ai-sdk/groq": "^1.2.7",
+    "@ai-sdk/react": "^1.2.5",
+    "@anthropic-ai/sdk": "^0.36.3",
+    "@google/generative-ai": "^0.21.0",
+    "@stripe/react-stripe-js": "^3.7.0",
+    "@stripe/stripe-js": "^7.3.0",
+    "@supabase/ssr": "^0.6.1",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "ai": "^4.2.10",
+    "cookies-next": "^5.1.0",
+    "install": "^0.13.0",
+    "ldrs": "^1.0.2",
+    "lodash": "^4.17.21",
+    "motion": "^12.0.5",
+    "next": "^15.3.2",
+    "npm": "^11.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.5.0",
+    "server-only": "^0.0.1",
+    "stripe": "^18.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.6",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

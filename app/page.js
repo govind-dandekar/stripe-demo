@@ -17,10 +17,18 @@ async function HomePage() {
         <p>Welcome To...</p>
         <p>The Bluey Quiz Game!</p>
       </div>
-      <Link href="/checkout-session">
-        <SubmitButton>Pay via Stripe Checkout</SubmitButton>
-      </Link>
 
+      <form action="/api/checkout_sessions" method="POST">
+        <section>
+          <button
+            type="submit"
+            role="link"
+            className="bg-cyan-800 rounded-2xl py-3 px-8 mt-10 text-lg md:text-3xl hover:bg-cyan-900 hover:scale-110 transition delay-100 duration-300"
+          >
+            Pay via Stripe Checkout
+          </button>
+        </section>
+      </form>
       <Link href="/payment-page">
         <SubmitButton>Pay via Stripe Elements</SubmitButton>
       </Link>

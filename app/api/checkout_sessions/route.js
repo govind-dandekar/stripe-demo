@@ -17,6 +17,9 @@ export async function POST() {
           quantity: 1,
         },
       ],
+      automatic_tax: {
+        enabled: true,
+      },
       mode: "payment",
       customer_creation: "always",
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,

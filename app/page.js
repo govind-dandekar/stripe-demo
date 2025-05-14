@@ -18,6 +18,9 @@ async function HomePage() {
         <p>The Bluey Quiz Game!</p>
       </div>
 
+      <Link href="/payment-page">
+        <SubmitButton>Pay via Stripe Elements</SubmitButton>
+      </Link>
       <form action="/api/checkout_sessions" method="POST">
         <section>
           <button
@@ -29,9 +32,6 @@ async function HomePage() {
           </button>
         </section>
       </form>
-      <Link href="/payment-page">
-        <SubmitButton>Pay via Stripe Elements</SubmitButton>
-      </Link>
     </>
   );
 }

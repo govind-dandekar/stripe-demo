@@ -4,7 +4,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Chewy } from "next/font/google";
 
 import "./globals.css";
-import CustomFooter from "@/components/custom-footer";
 
 const chewy = Chewy({
   subsets: ["latin"],

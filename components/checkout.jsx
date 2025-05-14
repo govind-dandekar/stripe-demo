@@ -66,10 +66,10 @@ function PaymentForm() {
     <form onSubmit={handleSubmit}>
 			<AddressElement options={{mode: 'billing'}} />
       <PaymentElement options={paymentElementOptions} />
-			{/* <ExpressCheckoutElement options={{paymentMethods: {
+			<ExpressCheckoutElement options={{paymentMethods: {
 				apple_pay: 'always',
 				google_pay: 'always'
-			}}}/> */}
+			}}}/>
 			{/* <ExpressCheckoutElement /> */}
       <button disabled={isLoading || !stripe || !elements}>
         <span>

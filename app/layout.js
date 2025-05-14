@@ -6,6 +6,8 @@ import { Chewy } from "next/font/google";
 import "./globals.css";
 import CustomFooter from "@/components/custom-footer";
 
+import Script from "next/script";
+
 const chewy = Chewy({
   subsets: ["latin"],
   weight: "400",

@@ -5,7 +5,9 @@ import {
   PaymentElement,
   useStripe,
   useElements,
-  Elements
+  Elements,
+	AddressElement,
+	ExpressCheckoutElement
 } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 
@@ -17,7 +19,6 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 function PaymentForm() {
   const stripe = useStripe();
   const elements = useElements();
-
 
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -59,9 +60,17 @@ function PaymentForm() {
     layout: "accordion",
   };
 
+	
+
   return (
     <form onSubmit={handleSubmit}>
+			<AddressElement options={{mode: 'billing'}} />
       <PaymentElement options={paymentElementOptions} />
+			{/* <ExpressCheckoutElement options={{paymentMethods: {
+				apple_pay: 'always',
+				google_pay: 'always'
+			}}}/> */}
+			{/* <ExpressCheckoutElement /> */}
       <button disabled={isLoading || !stripe || !elements}>
         <span>
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}

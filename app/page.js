@@ -17,8 +17,12 @@ async function HomePage() {
         <p>Welcome To...</p>
         <p>The Bluey Quiz Game!</p>
       </div>
+      <Link href="/checkout-session">
+        <SubmitButton>Pay via Stripe Checkout</SubmitButton>
+      </Link>
+
       <Link href="/payment-page">
-        <SubmitButton>Click Here To Subscribe!</SubmitButton>
+        <SubmitButton>Pay via Stripe Elements</SubmitButton>
       </Link>
     </>
   );

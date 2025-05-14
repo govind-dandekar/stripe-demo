@@ -10,6 +10,7 @@ import {
 	ExpressCheckoutElement
 } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
+import SubmitButton from "./ui/submit-button";
 
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
@@ -57,7 +58,7 @@ function PaymentForm() {
   };
 
   const paymentElementOptions = {
-    layout: "accordion",
+    layout: "tabs",
   };
 
 	
@@ -70,10 +71,9 @@ function PaymentForm() {
 				apple_pay: 'always',
 				google_pay: 'always'
 			}}}/>
-			{/* <ExpressCheckoutElement /> */}
-      <button disabled={isLoading || !stripe || !elements}>
+      <button disabled={isLoading || !stripe || !elements} className="bg-cyan-800 rounded-2xl py-3 px-8 mt-10 text-lg md:text-3xl hover:bg-cyan-900 hover:scale-110 transition delay-100 duration-300">
         <span>
-          {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
+          {isLoading ? "Submitting..." : "Pay $10 USD Now!"}
         </span>
       </button>
       {/* Show any error or success messages */}

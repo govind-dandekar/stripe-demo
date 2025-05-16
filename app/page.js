@@ -15,7 +15,7 @@ async function HomePage() {
       />
       <div className="space-y-4 text-nowrap mt-8 text-3xl md:text-6xl">
         <p>Welcome To...</p>
-        <p>The Bluey World!</p>
+        <p>BlueyWorld!</p>
       </div>
 
       <Link href="/payment-page">
